@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2F0F808F-43D6-4A51-8D71-BF26ACAC1D47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{16C1003E-FBCD-4377-B5B1-116B4A997EE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A709C149-D697-4600-81AA-C4C8B9D55E38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{D8D76257-E5A0-4EE3-B651-FED1FD86F634}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{32DA6CAF-333A-4D84-88F1-6994FB0B7E80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Astral.PaymentIntegration.Application", "src\Application\Astral.PaymentIntegration.Application\Astral.PaymentIntegration.Application.csproj", "{1D8EB1D3-6D86-4954-A444-173ECBDEBB79}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Astral.PaymentIntegration.Core", "src\Core\Astral.PaymentIntegration.Core\Astral.PaymentIntegration.Core.csproj", "{FDD205DB-9B99-44A5-9BD6-978384EB4E38}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Astral.PaymentIntegration.Scheduler", "src\Host\Astral.PaymentIntegration.Scheduler\Astral.PaymentIntegration.Scheduler.csproj", "{18D05E6D-24E5-485F-BA53-FCBCB9CD5880}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Astral.PaymentIntegration.Consumer", "src\Host\Astral.PaymentIntegration.Consumer\Astral.PaymentIntegration.Consumer.csproj", "{6D229FBF-AEF2-40EA-8F58-A522F7DB5DC6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Astral.PaymentIntegration.API", "src\Host\Astral.PaymentIntegration.API\Astral.PaymentIntegration.API.csproj", "{C1809240-B9AF-4EA8-92F1-CB7B0376761B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Astral.PaymentIntegration.Infrastructure", "src\Infrastructure\Astral.PaymentIntegration.Infrastructure\Astral.PaymentIntegration.Infrastructure.csproj", "{EFC03C02-DA66-4C70-A637-BFC711D1B7A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{7C99EB8A-078D-4E15-8D3D-6C94DCA4A2F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Astral.PaymentIntegration.UnitTests", "src\Test\Astral.PaymentIntegration.UnitTests\Astral.PaymentIntegration.UnitTests.csproj", "{B75826F4-CB3E-47D6-95B9-AAEAA4A502F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Astral.PaymentIntegration.Benchmarks", "src\Test\Astral.PaymentIntegration.Benchmarks\Astral.PaymentIntegration.Benchmarks.csproj", "{1C92E21B-AE0B-4BF7-B16E-F582AF5A21C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D8EB1D3-6D86-4954-A444-173ECBDEBB79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8EB1D3-6D86-4954-A444-173ECBDEBB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8EB1D3-6D86-4954-A444-173ECBDEBB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8EB1D3-6D86-4954-A444-173ECBDEBB79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDD205DB-9B99-44A5-9BD6-978384EB4E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD205DB-9B99-44A5-9BD6-978384EB4E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD205DB-9B99-44A5-9BD6-978384EB4E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD205DB-9B99-44A5-9BD6-978384EB4E38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18D05E6D-24E5-485F-BA53-FCBCB9CD5880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18D05E6D-24E5-485F-BA53-FCBCB9CD5880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18D05E6D-24E5-485F-BA53-FCBCB9CD5880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18D05E6D-24E5-485F-BA53-FCBCB9CD5880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D229FBF-AEF2-40EA-8F58-A522F7DB5DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D229FBF-AEF2-40EA-8F58-A522F7DB5DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D229FBF-AEF2-40EA-8F58-A522F7DB5DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D229FBF-AEF2-40EA-8F58-A522F7DB5DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1809240-B9AF-4EA8-92F1-CB7B0376761B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1809240-B9AF-4EA8-92F1-CB7B0376761B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1809240-B9AF-4EA8-92F1-CB7B0376761B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1809240-B9AF-4EA8-92F1-CB7B0376761B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC03C02-DA66-4C70-A637-BFC711D1B7A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC03C02-DA66-4C70-A637-BFC711D1B7A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC03C02-DA66-4C70-A637-BFC711D1B7A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC03C02-DA66-4C70-A637-BFC711D1B7A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B75826F4-CB3E-47D6-95B9-AAEAA4A502F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B75826F4-CB3E-47D6-95B9-AAEAA4A502F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B75826F4-CB3E-47D6-95B9-AAEAA4A502F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B75826F4-CB3E-47D6-95B9-AAEAA4A502F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C92E21B-AE0B-4BF7-B16E-F582AF5A21C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C92E21B-AE0B-4BF7-B16E-F582AF5A21C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C92E21B-AE0B-4BF7-B16E-F582AF5A21C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C92E21B-AE0B-4BF7-B16E-F582AF5A21C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{16C1003E-FBCD-4377-B5B1-116B4A997EE0} = {2F0F808F-43D6-4A51-8D71-BF26ACAC1D47}
+		{A709C149-D697-4600-81AA-C4C8B9D55E38} = {2F0F808F-43D6-4A51-8D71-BF26ACAC1D47}
+		{D8D76257-E5A0-4EE3-B651-FED1FD86F634} = {2F0F808F-43D6-4A51-8D71-BF26ACAC1D47}
+		{32DA6CAF-333A-4D84-88F1-6994FB0B7E80} = {2F0F808F-43D6-4A51-8D71-BF26ACAC1D47}
+		{1D8EB1D3-6D86-4954-A444-173ECBDEBB79} = {16C1003E-FBCD-4377-B5B1-116B4A997EE0}
+		{FDD205DB-9B99-44A5-9BD6-978384EB4E38} = {A709C149-D697-4600-81AA-C4C8B9D55E38}
+		{18D05E6D-24E5-485F-BA53-FCBCB9CD5880} = {D8D76257-E5A0-4EE3-B651-FED1FD86F634}
+		{6D229FBF-AEF2-40EA-8F58-A522F7DB5DC6} = {D8D76257-E5A0-4EE3-B651-FED1FD86F634}
+		{C1809240-B9AF-4EA8-92F1-CB7B0376761B} = {D8D76257-E5A0-4EE3-B651-FED1FD86F634}
+		{EFC03C02-DA66-4C70-A637-BFC711D1B7A0} = {32DA6CAF-333A-4D84-88F1-6994FB0B7E80}
+		{7C99EB8A-078D-4E15-8D3D-6C94DCA4A2F7} = {2F0F808F-43D6-4A51-8D71-BF26ACAC1D47}
+		{B75826F4-CB3E-47D6-95B9-AAEAA4A502F8} = {7C99EB8A-078D-4E15-8D3D-6C94DCA4A2F7}
+		{1C92E21B-AE0B-4BF7-B16E-F582AF5A21C8} = {7C99EB8A-078D-4E15-8D3D-6C94DCA4A2F7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {994CCF10-A78F-4970-9E37-A3759AE048D5}
+	EndGlobalSection
+EndGlobal
