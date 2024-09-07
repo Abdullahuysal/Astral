@@ -1,0 +1,6 @@
+@Astral.Membership.API_HostAddress = http://localhost:5159
+
+GET {{Astral.Membership.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

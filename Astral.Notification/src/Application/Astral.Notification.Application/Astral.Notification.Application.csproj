@@ -6,4 +6,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="ApplicationExceptions\" />
+    <Folder Include="ApplicationCommands\" />
+    <Folder Include="ApplicationEvents\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Convey.CQRS.Queries" Version="1.1.448" />
+    <PackageReference Include="MediatR" Version="12.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Astral.Notification.Core\Astral.Notification.Core.csproj" />
+  </ItemGroup>
+
 </Project>
