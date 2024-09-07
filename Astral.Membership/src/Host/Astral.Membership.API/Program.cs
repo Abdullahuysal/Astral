@@ -1,8 +1,18 @@
+using Astral.Membership.API.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
-var env = builder.Environment;
+builder.RegisterServices(typeof(Program));
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-Console.WriteLine("Sa");
-Console.ReadLine();
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+app.RegisterPipelineComponents(typeof(Program));
+app.UseHttpsRedirection();
 app.Run();
