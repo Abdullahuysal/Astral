@@ -3,16 +3,9 @@ using Astral.Membership.API.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.RegisterServices(typeof(Program));
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
+builder.Services.AddControllers();
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
 app.RegisterPipelineComponents(typeof(Program));
-app.UseHttpsRedirection();
+app.MapControllers();
 app.Run();

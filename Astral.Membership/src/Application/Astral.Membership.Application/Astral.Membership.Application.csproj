@@ -6,4 +6,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="ApplicationEvents\" />
+    <Folder Include="ApplicationExceptions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Astral.Membership.Infrastructure\Astral.Membership.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
