@@ -23,6 +23,7 @@ namespace Astral.Membership.API.Controllers
         }
 
         [HttpPost]
+        [Route("CreateUser")]
         public async Task<IActionResult> CreateUser(CreateUserRequest request)
         {
             var command = _mapper.Map<CreateUserCommand>(request);
