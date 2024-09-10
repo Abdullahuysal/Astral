@@ -31,5 +31,15 @@ namespace Astral.Membership.API.Controllers
             var newUser = _mapper.Map<CreateUserResponse>(commandResponse);
             return Ok(newUser);
         }
+
+        //[HttpPost]
+        //[Route("Login")]
+        //public async Task<IActionResult> Login(string userName, string Password)
+        //{
+        //    var command = new
+        //    var commandResponse = await _mediator.Send(command);
+        //    var newUser = _mapper.Map<CreateUserResponse>(commandResponse);
+        //    return Ok(newUser);
+        //}
     }
 }
