@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Astral.Membership.Application.ApplicationCommands.UserCommands
 {
-    public class CreateUserCommand : IRequest<User>
+    public class CreateUserCommand : IRequest<bool>
     {
         public string UserName { get; private set; }
         public string Password { get; private set; }

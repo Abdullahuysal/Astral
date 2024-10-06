@@ -9,6 +9,7 @@
   <ItemGroup>
     <Folder Include="ApplicationEvents\" />
     <Folder Include="ApplicationExceptions\" />
+    <Folder Include="ApplicationQueries\" />
   </ItemGroup>
 
   <ItemGroup>

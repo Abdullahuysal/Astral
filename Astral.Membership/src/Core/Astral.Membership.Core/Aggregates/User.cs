@@ -31,5 +31,11 @@ namespace Astral.Membership.Core.Aggregates
                 IsApproved = false
             };
         }
+
+        public void UpdatePassword(string password)
+        {
+            Password = password;
+            UpdateTime = DateTime.Now;
+        }
     }
 }

@@ -1,9 +1,7 @@
 ﻿using Astral.Membership.API.Contracts.User.Requests;
-using Astral.Membership.API.Contracts.User.Responses;
 using Astral.Membership.Application.ApplicationCommands.UserCommands;
 using AutoMapper;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Astral.Membership.API.Controllers
@@ -23,13 +21,29 @@ namespace Astral.Membership.API.Controllers
         }
 
         [HttpPost]
-        [Route("CreateUser")]
-        public async Task<IActionResult> CreateUser(CreateUserRequest request)
+        [Route("Create")]
+        public async Task<IActionResult> Create(CreateUserRequest request)
         {
             var command = _mapper.Map<CreateUserCommand>(request);
-            var commandResponse = await _mediator.Send(command);
-            var newUser = _mapper.Map<CreateUserResponse>(commandResponse);
-            return Ok(newUser);
+            await _mediator.Send(command);
+            return Ok();
         }
+
+        [HttpPatch]
+        [Route("UpdatePassword")]
+        public async Task<IActionResult> UpdatePassword(UpdatePasswordRequest request)
+        {
+            var command = _mapper.Map<UpdatePasswordCommand>(request);
+            var result = await _mediator.Send(command);
+            if (result)
+            {
+                return Ok(new { Message = "Password updated successfully" });
+            }
+            else
+            {
+                return BadRequest(new { Message = "Password update failed" });
+            }
+        }
+
     }
 }

@@ -11,6 +11,7 @@ namespace Astral.Membership.API.Mappings
         public UserMappings()
         {
             CreateMap<CreateUserRequest, CreateUserCommand>();
+            CreateMap<UpdatePasswordRequest, UpdatePasswordCommand>();
             CreateMap<User, CreateUserResponse>();
         }
     }
