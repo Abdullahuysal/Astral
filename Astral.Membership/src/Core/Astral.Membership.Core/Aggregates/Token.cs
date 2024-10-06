@@ -27,7 +27,7 @@ namespace Astral.Membership.Core.Aggregates
                 UserId = userId,
                 Value = value,
                 CreateTime = DateTime.Now,
-                EndTime = DateTime.Now.AddMinutes(1),
+                EndTime = DateTime.Now.AddMinutes(10),
                 IsActive = true
             };
         }

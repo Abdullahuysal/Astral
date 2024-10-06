@@ -40,13 +40,9 @@ namespace Astral.Membership.API.Controllers
             var command = _mapper.Map<UpdatePasswordCommand>(request);
             var result = await _mediator.Send(command);
             if (result)
-            {
-                return Ok(new { Message = "Password updated successfully" });
-            }
+                return Ok(new Response<string>(true, "Password updated successfully", string.Empty));
             else
-            {
-                return BadRequest(new { Message = "Password update failed" });
-            }
+                return BadRequest(new Response<string>(false, "Password update failed", string.Empty));
         }
 
         [HttpPost]
@@ -54,12 +50,25 @@ namespace Astral.Membership.API.Controllers
         public async Task<IActionResult> Login(string userName, string Password)
         {
             var token = await _userService.LoginAsync(userName, Password);
-            if(string.IsNullOrEmpty(token))
+            if (string.IsNullOrEmpty(token))
             {
                 return BadRequest(new Response<string>(false, "Invalid username or password", string.Empty));
             }
 
             return Ok(new Response<string>(true, string.Empty, token));
+        }
+
+        [HttpPatch]
+        [Route("Logout")]
+        public async Task<IActionResult> Logout(string userName, string token)
+        {
+            var result = await _userService.LogoutAsync(userName, token);
+            if (!result)
+            {
+                return BadRequest(new Response<string>(false, "Logout failed", string.Empty));
+            }
+
+            return Ok(new Response<string>(true, "Logout successful", string.Empty));
         }
 
     }

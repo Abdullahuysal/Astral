@@ -31,8 +31,24 @@ namespace Astral.Membership.Application.ApplicationServices
                 return await Task.FromResult(string.Empty);
             }
 
-            var token =await  _tokenService.GetActiveToken(user);
-            return  await Task.FromResult(token);
+            var token = await _tokenService.GetActiveToken(user);
+            return await Task.FromResult(token);
+        }
+
+        public async Task<bool> LogoutAsync(string userName, string token)
+        {
+            var tokenRepository = _unitOfWork.GetRepository<Token>();
+            var userRepository = _unitOfWork.GetRepository<User>();
+            var user = await userRepository.FindAsync(x => x.UserName == userName);
+            if (user == null)
+                return false;
+
+            var activeToken = await tokenRepository.FindAsync(x => x.Value == token && x.UserId == user.Id && x.IsActive == true && x.EndTime < DateTime.Now);
+            if (activeToken == null)
+                return false;
+            activeToken.IsActive = false;
+            await _unitOfWork.SaveChangesAsync();
+            return true;
         }
 
         public Task<string> EncryptPassword(string password)
