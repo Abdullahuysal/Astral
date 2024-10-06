@@ -1,5 +1,5 @@
-﻿using Astral.Membership.Core.Services;
-using Astral.Membership.Infrastructure.Services;
+﻿using Astral.Membership.Application.ApplicationServices;
+using Astral.Membership.Core.Services;
 
 namespace Astral.Membership.API.Registrars
 {
@@ -8,6 +8,7 @@ namespace Astral.Membership.API.Registrars
         public void RegisterServices(WebApplicationBuilder builder)
         {
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<ITokenService, TokenService>();
         }
     }
 }

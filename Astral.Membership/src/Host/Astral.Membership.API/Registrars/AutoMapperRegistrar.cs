@@ -4,6 +4,7 @@
     {
         public void RegisterServices(WebApplicationBuilder builder)
         {
+            builder.Services.AddAutoMapper(typeof(Program));
 
         }
     }

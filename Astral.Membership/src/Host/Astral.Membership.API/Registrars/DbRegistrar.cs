@@ -11,6 +11,5 @@ namespace Astral.Membership.API.Registrars
             var sqlConnection = builder.Configuration.GetConnectionString("SqlConnection");
             builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(sqlConnection));
         }
-
     }
 }

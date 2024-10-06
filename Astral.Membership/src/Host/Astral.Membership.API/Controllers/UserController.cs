@@ -1,5 +1,7 @@
 ﻿using Astral.Membership.API.Contracts.User.Requests;
 using Astral.Membership.Application.ApplicationCommands.UserCommands;
+using Astral.Membership.Core.Common;
+using Astral.Membership.Core.Services;
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -13,11 +15,13 @@ namespace Astral.Membership.API.Controllers
 
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
+        private readonly IUserService _userService;
 
-        public UserController(IMediator mediator, IMapper mapper)
+        public UserController(IMediator mediator, IMapper mapper, IUserService userService)
         {
             _mediator = mediator;
             _mapper = mapper;
+            _userService = userService;
         }
 
         [HttpPost]
@@ -43,6 +47,19 @@ namespace Astral.Membership.API.Controllers
             {
                 return BadRequest(new { Message = "Password update failed" });
             }
+        }
+
+        [HttpPost]
+        [Route("Login")]
+        public async Task<IActionResult> Login(string userName, string Password)
+        {
+            var token = await _userService.LoginAsync(userName, Password);
+            if(string.IsNullOrEmpty(token))
+            {
+                return BadRequest(new Response<string>(false, "Invalid username or password", string.Empty));
+            }
+
+            return Ok(new Response<string>(true, string.Empty, token));
         }
 
     }

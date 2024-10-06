@@ -1,4 +1,5 @@
 ﻿
+using Astral.Membership.Application.ApplicationCommands.TokenCommands;
 using Astral.Membership.Application.ApplicationCommands.UserCommands;
 
 namespace Astral.Membership.API.Registrars
@@ -9,6 +10,7 @@ namespace Astral.Membership.API.Registrars
         {
             builder.Services.AddMediatR(config => config.RegisterServicesFromAssembly(typeof(CreateUserCommandHandler).Assembly));
             builder.Services.AddMediatR(config => config.RegisterServicesFromAssembly(typeof(UpdatePasswordCommandHandler).Assembly));
+            builder.Services.AddMediatR(config => config.RegisterServicesFromAssembly(typeof(CreateTokenCommandHandler).Assembly));
         }
     }
 }

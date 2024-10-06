@@ -15,6 +15,7 @@ namespace Astral.Membership.Core.Interfaces
         void Delete(TEntity entity);
         Task<IEnumerable<TEntity>> GetAllAsync();
         Task<TEntity> FindAsync(Expression<Func<TEntity, bool>> predicate);
+        Task<IEnumerable<TEntity>> FindAllAsync(Expression<Func<TEntity, bool>> predicate);
 
     }
 }
