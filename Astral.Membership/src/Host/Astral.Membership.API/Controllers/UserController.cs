@@ -1,6 +1,6 @@
 ﻿using Astral.Membership.API.Contracts.User.Requests;
+using Astral.Membership.API.Extensions;
 using Astral.Membership.Application.ApplicationCommands.UserCommands;
-using Astral.Membership.Core.Common;
 using Astral.Membership.Core.Services;
 using AutoMapper;
 using MediatR;
@@ -35,40 +35,27 @@ namespace Astral.Membership.API.Controllers
 
         [HttpPatch]
         [Route("UpdatePassword")]
-        public async Task<IActionResult> UpdatePassword(UpdatePasswordRequest request)
+        public async Task<IResult> UpdatePassword(UpdatePasswordRequest request)
         {
             var command = _mapper.Map<UpdatePasswordCommand>(request);
             var result = await _mediator.Send(command);
-            if (result)
-                return Ok(new Response<string>(true, "Password updated successfully", string.Empty));
-            else
-                return BadRequest(new Response<string>(false, "Password update failed", string.Empty));
+            return result.IsSuccess ? Results.Ok(result.Value) : result.ToProblemDetails();
         }
 
         [HttpPost]
         [Route("Login")]
-        public async Task<IActionResult> Login(string userName, string Password)
+        public async Task<IResult> Login(string userName, string Password)
         {
             var token = await _userService.LoginAsync(userName, Password);
-            if (string.IsNullOrEmpty(token))
-            {
-                return BadRequest(new Response<string>(false, "Invalid username or password", string.Empty));
-            }
-
-            return Ok(new Response<string>(true, string.Empty, token));
+            return !string.IsNullOrEmpty(token) ? Results.Ok(token) : Results.BadRequest("Invalid username or password");
         }
 
         [HttpPatch]
         [Route("Logout")]
-        public async Task<IActionResult> Logout(string userName, string token)
+        public async Task<IResult> Logout(string userName, string token)
         {
             var result = await _userService.LogoutAsync(userName, token);
-            if (!result)
-            {
-                return BadRequest(new Response<string>(false, "Logout failed", string.Empty));
-            }
-
-            return Ok(new Response<string>(true, "Logout successful", string.Empty));
+            return result ? Results.Ok() : Results.BadRequest("Logout failed");
         }
 
     }

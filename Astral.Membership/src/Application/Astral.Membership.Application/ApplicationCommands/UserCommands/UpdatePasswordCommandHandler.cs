@@ -1,14 +1,12 @@
 ﻿using Astral.Membership.Core.Aggregates;
 using Astral.Membership.Core.Interfaces;
 using Astral.Membership.Core.Services;
+using Astral.Membership.Core.Shared;
 using MediatR;
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Astral.Membership.Application.ApplicationCommands.UserCommands
 {
-    public class UpdatePasswordCommandHandler : IRequestHandler<UpdatePasswordCommand, bool>
+    public class UpdatePasswordCommandHandler : IRequestHandler<UpdatePasswordCommand, Result<bool>>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IUserService _userService;
@@ -19,7 +17,7 @@ namespace Astral.Membership.Application.ApplicationCommands.UserCommands
             _userService = userService;
         }
 
-        public async Task<bool> Handle(UpdatePasswordCommand request, CancellationToken cancellationToken)
+        public async Task<Result<bool>> Handle(UpdatePasswordCommand request, CancellationToken cancellationToken)
         {
             var userRepository = _unitOfWork.GetRepository<User>();
 

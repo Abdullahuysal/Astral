@@ -1,12 +1,12 @@
 ﻿using Astral.Membership.Core.Aggregates;
-using Astral.Membership.Core.Common;
 using Astral.Membership.Core.Interfaces;
 using Astral.Membership.Core.Services;
+using Astral.Membership.Core.Shared;
 using MediatR;
 
 namespace Astral.Membership.Application.ApplicationCommands.TokenCommands
 {
-    public class CreateTokenCommandHandler : IRequestHandler<CreateTokenCommand, Response<string>>
+    public class CreateTokenCommandHandler : IRequestHandler<CreateTokenCommand, Result<string>>
     {
         private readonly IUserService _userService;
         private readonly IUnitOfWork _unitOfWork;
@@ -17,7 +17,7 @@ namespace Astral.Membership.Application.ApplicationCommands.TokenCommands
             _unitOfWork = unitOfWork;
         }
 
-        async Task<Response<string>> IRequestHandler<CreateTokenCommand, Response<string>>.Handle(CreateTokenCommand request, CancellationToken cancellationToken)
+        async Task<Result<string>> IRequestHandler<CreateTokenCommand, Result<string>>.Handle(CreateTokenCommand request, CancellationToken cancellationToken)
         {
             var userRepository = _unitOfWork.GetRepository<User>();
             var tokenRepository = _unitOfWork.GetRepository<Token>();
@@ -25,12 +25,13 @@ namespace Astral.Membership.Application.ApplicationCommands.TokenCommands
 
             if (user == null)
             {
-                return new Response<string>(false, "User not found", string.Empty);
+                return Result.Failure<string>(ApplicationErrors.NotFound("Application Failure","User Can Not Be Null"));
+
             }
 
             if (!await _userService.ValidatePasswordAsync(request.Password, user.Password))
             {
-                return new Response<string>(false, "Invalid password", string.Empty);
+                return Result.Failure<string>(ApplicationErrors.Invalid("Application Failure", "Password is not valid"));
             }
 
             var generatedToken = "";
@@ -38,7 +39,7 @@ namespace Astral.Membership.Application.ApplicationCommands.TokenCommands
             tokenRepository.Add(newToken);
             await _unitOfWork.SaveChangesAsync();
 
-            return new Response<string>(true, "Token generated successfully", newToken.Value);
+            return Result.Success(generatedToken);
         }
     }
 }
