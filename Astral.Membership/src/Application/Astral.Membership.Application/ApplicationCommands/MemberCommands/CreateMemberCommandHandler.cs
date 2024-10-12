@@ -1,14 +1,13 @@
-﻿using Astral.Membership.Application.ApplicationServices;
+﻿using Astral.Membership.Core.Services;
 using Astral.Membership.Core.Shared;
 using MediatR;
-using System.Reflection;
 
 namespace Astral.Membership.Application.ApplicationCommands.MemberCommands
 {
     public class CreateMemberCommandHandler : IRequestHandler<CreateMemberCommand, Result<bool>>
     {
-        private readonly MemberService _memberService;
-        public CreateMemberCommandHandler(MemberService memberService)
+        private readonly IMemberService _memberService;
+        public CreateMemberCommandHandler(IMemberService memberService)
         {
             _memberService = memberService;
         }
