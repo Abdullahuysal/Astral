@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Astral.Membership.Core.Aggregates
+﻿namespace Astral.Membership.Core.Aggregates
 {
     public record User
     {
         public User()
         {
-            
+
         }
         public Guid Id { get; private set; }
         public string UserName { get; private set; }

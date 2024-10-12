@@ -12,7 +12,6 @@ namespace Astral.Membership.API.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
         private readonly IUserService _userService;
