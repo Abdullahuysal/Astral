@@ -1,0 +1,6 @@
+@Astral.OrderIntegration.API_HostAddress = http://localhost:5089
+
+GET {{Astral.OrderIntegration.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
