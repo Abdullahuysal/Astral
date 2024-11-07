@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{26B32FC9-A91D-4301-97E2-90DF4F19B252}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{55B494FB-7252-4B48-A2EF-2D2F8310DC74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{BF0FDB03-4387-4E5E-B090-F0F0A55BBD64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Astral.Catalog.Application", "Application\Astral.Catalog.Application\Astral.Catalog.Application.csproj", "{B7D79445-2E83-46B2-BC0B-D54CF5D987AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{ED7CE80A-C6E0-4DF6-A688-D0D3DC6512C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Astral.Catalog.API", "Host\Astral.Catalog.API\Astral.Catalog.API.csproj", "{2DAC8ECC-2B7B-48FE-BCEA-9CD8B66F49BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7D79445-2E83-46B2-BC0B-D54CF5D987AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D79445-2E83-46B2-BC0B-D54CF5D987AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D79445-2E83-46B2-BC0B-D54CF5D987AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D79445-2E83-46B2-BC0B-D54CF5D987AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DAC8ECC-2B7B-48FE-BCEA-9CD8B66F49BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DAC8ECC-2B7B-48FE-BCEA-9CD8B66F49BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DAC8ECC-2B7B-48FE-BCEA-9CD8B66F49BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DAC8ECC-2B7B-48FE-BCEA-9CD8B66F49BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF0FDB03-4387-4E5E-B090-F0F0A55BBD64} = {26B32FC9-A91D-4301-97E2-90DF4F19B252}
+		{B7D79445-2E83-46B2-BC0B-D54CF5D987AB} = {BF0FDB03-4387-4E5E-B090-F0F0A55BBD64}
+		{ED7CE80A-C6E0-4DF6-A688-D0D3DC6512C3} = {26B32FC9-A91D-4301-97E2-90DF4F19B252}
+		{2DAC8ECC-2B7B-48FE-BCEA-9CD8B66F49BF} = {ED7CE80A-C6E0-4DF6-A688-D0D3DC6512C3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C313E70-97E5-44E7-8AA6-B9F7FF38A6CF}
+	EndGlobalSection
+EndGlobal
