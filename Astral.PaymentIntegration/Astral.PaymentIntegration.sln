@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AB110813-C04B-404B-9A75-7AFC9701351C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{84E55A0D-F701-4CC9-B883-EBDB6B057D0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Astral.PaymentIntegration.Domain", "src\Astral.PaymentIntegration.Domain\Astral.PaymentIntegration.Domain.csproj", "{D641C61C-610D-422F-A39F-E79AF1EEF79A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D641C61C-610D-422F-A39F-E79AF1EEF79A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D641C61C-610D-422F-A39F-E79AF1EEF79A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D641C61C-610D-422F-A39F-E79AF1EEF79A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D641C61C-610D-422F-A39F-E79AF1EEF79A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D641C61C-610D-422F-A39F-E79AF1EEF79A} = {AB110813-C04B-404B-9A75-7AFC9701351C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8D9987A-A674-4341-88A2-9FC7B91379AF}
+	EndGlobalSection
+EndGlobal
