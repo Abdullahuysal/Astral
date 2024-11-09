@@ -1,5 +1,6 @@
 ﻿using Astral.PaymentIntegration.Domain.Abstractions;
 using Astral.PaymentIntegration.Domain.Payments.Events;
+using Astral.PaymentIntegration.Domain.Shared;
 
 namespace Astral.PaymentIntegration.Domain.Payments
 {
@@ -36,7 +37,7 @@ namespace Astral.PaymentIntegration.Domain.Payments
         public bool IsConfirmed { get; private set; }
         public List<PaymentItem> PaymentItems { get; private set; } = new();
 
-        public static Payment Create(Guid memberId, ExternalCode externalCode, Money price, Currency currency, bool isConfirmed, List<PaymentItem> paymentItems)
+        public static Payment Create(Guid memberId, ExternalCode externalCode, Money price, Currency currency, bool isConfirmed)
         {
             var payment = new Payment(Guid.NewGuid(), memberId, externalCode, DateTime.UtcNow, DateTime.UtcNow, price, currency, isConfirmed, PaymentStatus.Pending);
             payment.RaiseDomainEvent(new PaymentCreateDomainEvent(payment.Id));

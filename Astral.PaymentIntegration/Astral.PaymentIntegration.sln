@@ -7,7 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AB110813-C04
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{84E55A0D-F701-4CC9-B883-EBDB6B057D0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Astral.PaymentIntegration.Domain", "src\Astral.PaymentIntegration.Domain\Astral.PaymentIntegration.Domain.csproj", "{D641C61C-610D-422F-A39F-E79AF1EEF79A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Astral.PaymentIntegration.Domain", "src\Astral.PaymentIntegration.Domain\Astral.PaymentIntegration.Domain.csproj", "{D641C61C-610D-422F-A39F-E79AF1EEF79A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Astral.PaymentIntegration.Application", "src\Astral.PaymentIntegration.Application\Astral.PaymentIntegration.Application.csproj", "{E957C22D-BB00-4EC8-8FB1-17B06B1BBEEE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Astral.PaymentIntegration.Infrastructure", "src\Astral.PaymentIntegration.Infrastructure\Astral.PaymentIntegration.Infrastructure.csproj", "{BBB05858-5BB0-430F-862A-28439BD3ACF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Astral.PaymentIntegration.API", "src\Astral.PaymentIntegration.API\Astral.PaymentIntegration.API.csproj", "{8DCE4587-1D4B-451B-ADB7-673CD889FCC9}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{84C8DBE5-F528-4E36-9C12-1C76BCD5C7CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +27,31 @@ Global
 		{D641C61C-610D-422F-A39F-E79AF1EEF79A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D641C61C-610D-422F-A39F-E79AF1EEF79A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D641C61C-610D-422F-A39F-E79AF1EEF79A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E957C22D-BB00-4EC8-8FB1-17B06B1BBEEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E957C22D-BB00-4EC8-8FB1-17B06B1BBEEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E957C22D-BB00-4EC8-8FB1-17B06B1BBEEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E957C22D-BB00-4EC8-8FB1-17B06B1BBEEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBB05858-5BB0-430F-862A-28439BD3ACF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBB05858-5BB0-430F-862A-28439BD3ACF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBB05858-5BB0-430F-862A-28439BD3ACF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBB05858-5BB0-430F-862A-28439BD3ACF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DCE4587-1D4B-451B-ADB7-673CD889FCC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DCE4587-1D4B-451B-ADB7-673CD889FCC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DCE4587-1D4B-451B-ADB7-673CD889FCC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DCE4587-1D4B-451B-ADB7-673CD889FCC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C8DBE5-F528-4E36-9C12-1C76BCD5C7CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C8DBE5-F528-4E36-9C12-1C76BCD5C7CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C8DBE5-F528-4E36-9C12-1C76BCD5C7CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C8DBE5-F528-4E36-9C12-1C76BCD5C7CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D641C61C-610D-422F-A39F-E79AF1EEF79A} = {AB110813-C04B-404B-9A75-7AFC9701351C}
+		{E957C22D-BB00-4EC8-8FB1-17B06B1BBEEE} = {AB110813-C04B-404B-9A75-7AFC9701351C}
+		{BBB05858-5BB0-430F-862A-28439BD3ACF9} = {AB110813-C04B-404B-9A75-7AFC9701351C}
+		{8DCE4587-1D4B-451B-ADB7-673CD889FCC9} = {AB110813-C04B-404B-9A75-7AFC9701351C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D8D9987A-A674-4341-88A2-9FC7B91379AF}

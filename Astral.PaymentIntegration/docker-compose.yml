@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  astral.paymentintegration.api:
+    image: ${DOCKER_REGISTRY-}astralpaymentintegrationapi
+    container_name: PaymentIntegration.Api
+    build:
+      context: .
+      dockerfile: src/Astral.PaymentIntegration.API/Dockerfile
+    depends_on:
+        - Payment
+
+  Payment:
+    image: postgres:latest
+    container_name: Payment.Db
+    environment:
+      - POSTGRES_DB=payment
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./.containers/database:/var/lib/postgresql/data
+    ports:
+      - 5432:5432

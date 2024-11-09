@@ -2,8 +2,8 @@
 {
     public interface IPaymentRepository
     {
-        void Add(Payment payment);
-
         Task<Payment?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
+
+        void Add(Payment payment);
     }
 }

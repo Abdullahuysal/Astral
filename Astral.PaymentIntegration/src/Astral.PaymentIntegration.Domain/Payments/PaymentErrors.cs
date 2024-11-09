@@ -8,6 +8,10 @@ namespace Astral.PaymentIntegration.Domain.Payments
             "Payment.NotFound",
             "The Payment with the specified identifiew was not found");
 
+        public static Error Overlap = new(
+            "Payment.Overlap",
+            "The Payment create was overlaped");
+
         public static Error NotCompleted = new(
            "Payment.NotCompleted",
            "The Payment is not completed");
@@ -19,5 +23,6 @@ namespace Astral.PaymentIntegration.Domain.Payments
         public static Error ThreeDNotCompleted = new(
             "Payment.ThreeDNotCompleted",
             "The ThreeD Payment is not completed");
+
     }
 }
