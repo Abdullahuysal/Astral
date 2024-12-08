@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{432E9315-5992-4E23-8294-4BBE97F28CB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Astral.Finance.Accounts.Application", "src\Astral.Finance.Accounts.Application\Astral.Finance.Accounts.Application.csproj", "{78252451-0F3A-46F3-9678-B98ACB4B337A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Astral.Finance.Accounts.Domain", "src\Astral.Finance.Accounts.Domain\Astral.Finance.Accounts.Domain.csproj", "{BFFE868E-9B3F-4125-A931-DABC6C422DC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Astral.Finance.Accounts.API", "src\Astral.Finance.Accounts.API\Astral.Finance.Accounts.API.csproj", "{E4B2AFFB-5BEC-44B9-88F4-6E000B3F13CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Astral.Finance.Accounts.Infrastructure", "src\Astral.Finance.Accounts.Infrastructure\Astral.Finance.Accounts.Infrastructure.csproj", "{88E3948B-959D-43E9-AD3D-5DAE280D428B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Astral.Finance.Accounts.Scheduler", "src\Astral.Finance.Accounts.Scheduler\Astral.Finance.Accounts.Scheduler.csproj", "{F60FA003-2801-42C5-ADE4-7F15497E4079}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78252451-0F3A-46F3-9678-B98ACB4B337A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78252451-0F3A-46F3-9678-B98ACB4B337A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78252451-0F3A-46F3-9678-B98ACB4B337A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78252451-0F3A-46F3-9678-B98ACB4B337A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFFE868E-9B3F-4125-A931-DABC6C422DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFFE868E-9B3F-4125-A931-DABC6C422DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFFE868E-9B3F-4125-A931-DABC6C422DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFFE868E-9B3F-4125-A931-DABC6C422DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4B2AFFB-5BEC-44B9-88F4-6E000B3F13CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B2AFFB-5BEC-44B9-88F4-6E000B3F13CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B2AFFB-5BEC-44B9-88F4-6E000B3F13CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B2AFFB-5BEC-44B9-88F4-6E000B3F13CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88E3948B-959D-43E9-AD3D-5DAE280D428B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E3948B-959D-43E9-AD3D-5DAE280D428B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E3948B-959D-43E9-AD3D-5DAE280D428B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E3948B-959D-43E9-AD3D-5DAE280D428B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F60FA003-2801-42C5-ADE4-7F15497E4079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F60FA003-2801-42C5-ADE4-7F15497E4079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F60FA003-2801-42C5-ADE4-7F15497E4079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F60FA003-2801-42C5-ADE4-7F15497E4079}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{78252451-0F3A-46F3-9678-B98ACB4B337A} = {432E9315-5992-4E23-8294-4BBE97F28CB7}
+		{BFFE868E-9B3F-4125-A931-DABC6C422DC4} = {432E9315-5992-4E23-8294-4BBE97F28CB7}
+		{E4B2AFFB-5BEC-44B9-88F4-6E000B3F13CF} = {432E9315-5992-4E23-8294-4BBE97F28CB7}
+		{88E3948B-959D-43E9-AD3D-5DAE280D428B} = {432E9315-5992-4E23-8294-4BBE97F28CB7}
+		{F60FA003-2801-42C5-ADE4-7F15497E4079} = {432E9315-5992-4E23-8294-4BBE97F28CB7}
+	EndGlobalSection
+EndGlobal

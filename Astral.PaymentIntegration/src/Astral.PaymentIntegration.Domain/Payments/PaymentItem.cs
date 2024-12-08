@@ -22,6 +22,10 @@ namespace Astral.PaymentIntegration.Domain.Payments
             Currency = currency;
             Status = status;
         }
+
+        private PaymentItem()
+        {
+        }
         public Guid PaymentId { get; private set; }
         public DateTime CreateTime { get; private set; }
         public DateTime UpdateTime { get; private set; }

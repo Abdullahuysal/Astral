@@ -18,6 +18,7 @@ namespace Astral.PaymentIntegration.API.Controllers.Payments
         }
 
         [HttpGet]
+        [Route("GetPayment")]
         public async Task<IActionResult> GetPayment(string externalCode, CancellationToken cancellationToken)
         {
             var query = new GetPaymentQuery(Guid.NewGuid());
@@ -27,6 +28,7 @@ namespace Astral.PaymentIntegration.API.Controllers.Payments
         }
 
         [HttpPost]
+        [Route("CreatePayment")]
         public async Task<IActionResult> CreatePayment(CreatePaymentRequest request, CancellationToken cancellationToken)
         {
             var command = new CreatePaymentCommand(

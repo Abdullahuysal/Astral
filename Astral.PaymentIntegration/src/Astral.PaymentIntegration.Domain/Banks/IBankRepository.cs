@@ -9,6 +9,6 @@ namespace Astral.PaymentIntegration.Domain.Banks
 {
     public interface IBankRepository
     {
-        Task<Payment?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
+        Task<Bank?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
     }
 }

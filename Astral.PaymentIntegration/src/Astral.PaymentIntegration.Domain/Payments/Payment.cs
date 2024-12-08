@@ -27,6 +27,11 @@ namespace Astral.PaymentIntegration.Domain.Payments
             Status = paymentStatus;
         }
 
+        private Payment()
+        {
+            
+        }
+
         public Guid MemberId { get; private set; }
         public ExternalCode ExternalCode { get; private set; }
         public DateTime CreateTime { get; private set; }

@@ -13,6 +13,9 @@ namespace Astral.PaymentIntegration.Infrastructure.Configurations
 
             builder.HasKey(paymentItem => paymentItem.Id);
 
+            builder.Property(payment => payment.PaymentId)
+                .IsRequired();
+
             builder.Property(payment => payment.CreateTime)
                 .IsRequired();
 
@@ -26,6 +29,10 @@ namespace Astral.PaymentIntegration.Infrastructure.Configurations
             });
 
             builder.Property(payment => payment.Currency)
+                .HasConversion(
+                    currency => currency.Code,
+                    code => Currency.FromCode(code)
+                )
                 .IsRequired();
 
             builder.Property(payment => payment.Status)

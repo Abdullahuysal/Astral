@@ -2,6 +2,7 @@
 using Astral.PaymentIntegration.Application.Abstractions.Data;
 using Astral.PaymentIntegration.Application.Abstractions.Notifications.Email;
 using Astral.PaymentIntegration.Domain.Abstractions;
+using Astral.PaymentIntegration.Domain.Banks;
 using Astral.PaymentIntegration.Domain.Payments;
 using Astral.PaymentIntegration.Infrastructure.Clock;
 using Astral.PaymentIntegration.Infrastructure.Context;
@@ -36,6 +37,8 @@ namespace Astral.PaymentIntegration.Infrastructure
             services.AddTransient<IEmailService, EmailService>();
 
             services.AddScoped<IPaymentRepository, PaymentRepository>();
+
+            services.AddScoped<IBankRepository, BankRepository>();
 
             services.AddScoped<IPaymentItemRepository, PaymentItemRepository>();
 

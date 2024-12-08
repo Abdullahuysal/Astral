@@ -9,7 +9,7 @@ namespace Astral.PaymentIntegration.Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<Payment> builder)
         {
-            builder.ToTable("payments","sales");
+            builder.ToTable("payments", "sales");
 
             builder.HasKey(payment => payment.Id);
 
@@ -35,6 +35,10 @@ namespace Astral.PaymentIntegration.Infrastructure.Configurations
             });
 
             builder.Property(payment => payment.Currency)
+                .HasConversion(
+                    currency => currency.Code,
+                    code => Currency.FromCode(code)
+                )
                 .IsRequired();
 
             builder.Property(payment => payment.Status)

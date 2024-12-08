@@ -8,6 +8,10 @@
         {
             Id = id;
         }
+
+        protected Aggregate()
+        {
+        }
         public Guid Id { get; init; }
 
         public IReadOnlyList<IDomainEvent> GetDomainEvents()
