@@ -1,0 +1,24 @@
+services:
+  astral.finance.accounts.api:
+    image: ${DOCKER_REGISTRY-}astralfinanceaccountsapi
+    build:
+      context: .
+      dockerfile: src/Astral.Finance.Accounts.API/Dockerfile
+    ports:
+      - "5000:80" 
+    depends_on:
+      - accountdb 
+
+  accountdb:
+    image: mysql:8.0
+    container_name: accountdb
+    restart: always 
+    environment:
+      MYSQL_ROOT_PASSWORD: yourpassword
+      MYSQL_DATABASE: accountdb 
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpassword
+    ports:
+      - "3306:3306" 
+    volumes:
+      - accountdb-data:/var/lib/mysql 

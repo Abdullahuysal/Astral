@@ -1,4 +1,5 @@
 ﻿using Astral.Finance.Accounts.Domain.Abstractions;
+using Astral.Finance.Accounts.Domain.Shared;
 
 namespace Astral.Finance.Accounts.Domain.Customers
 {

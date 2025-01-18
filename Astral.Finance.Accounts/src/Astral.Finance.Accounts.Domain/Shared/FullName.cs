@@ -1,4 +1,4 @@
-﻿namespace Astral.Finance.Accounts.Domain.Customers
+﻿namespace Astral.Finance.Accounts.Domain.Shared
 {
     public record FullName
     {
