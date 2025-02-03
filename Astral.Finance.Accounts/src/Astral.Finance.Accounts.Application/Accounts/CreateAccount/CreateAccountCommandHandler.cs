@@ -23,7 +23,19 @@ namespace Astral.Finance.Accounts.Application.Accounts.CreateAccount
         public async Task<Result<Guid>> Handle(CreateAccountCommand request, CancellationToken cancellationToken)
         {
 
-            return Guid.NewGuid();
+            var newAccount = Account.Create(
+                request.FullName,
+                request.Email,
+                request.Address,
+                request.AccountNumber,
+                AccountStatus.Active,
+                AccountType.Personal);
+
+            _accountRepository.Add(newAccount);
+
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+            return newAccount.Id;
         }
     }
 }

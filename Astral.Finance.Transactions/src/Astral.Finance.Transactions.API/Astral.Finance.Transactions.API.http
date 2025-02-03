@@ -1,0 +1,6 @@
+@Astral.Finance.Transactions.API_HostAddress = http://localhost:5226
+
+GET {{Astral.Finance.Transactions.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
