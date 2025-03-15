@@ -2,7 +2,7 @@
 
 namespace Astral.Finance.Transactions.Domain.Aggregates.Transactions
 {
-    internal class Transaction : Aggregate
+    public class Transaction : Aggregate
     {
         public Transaction(
             Guid id,
